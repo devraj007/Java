@@ -1,0 +1,24 @@
+class Main{
+    public static void main(String args[]){
+        String str1="Welcome to Online GBD         Plateform.Online Java    Debugger   .";
+        String result1;
+        //------------ Use replaceAll to Remove All white spaces 
+        result1=str1.replaceAll(" ","");
+        System.out.println(result1);
+        //------------ Regex Expression
+        String str2="Welcome to Online GBD      Plateform.  Online Java Debugger   .";
+        String result2=str2.replaceAll("\\s","");
+        String result3=str2.replaceAll("\\s+"," ");
+        System.out.println(result2);
+        System.out.println(result3);
+        //------------ Without Inbuilt Functions of Java
+        char arr[]=str1.toCharArray();
+        StringBuffer sb=new StringBuffer();
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]!=' ' && arr[i]!='\t'){
+                sb.append(arr[i]);
+            }
+        }
+        System.out.println(sb);
+    }
+}
